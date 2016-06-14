@@ -1,0 +1,50 @@
+/* app css stylesheet */
+
+body {
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  margin: 15px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.products {
+  height: 120px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+
+.products div {
+  height: 100%;
+  float: left;
+}
+
+.products div:nth-child(1) {
+  width: 160px;
+}
+
+.products div:nth-child(2) {
+  padding: 20px 0;
+}
+
+.products img {
+  height: 100%;
+  width: auto;
+  padding: 5px;
+}
+
+label,
+span.option {
+  margin: 15px;
+}

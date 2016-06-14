@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>AngularJS Example</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="app.config.js"></script>
+  <script src="services/delivery.service.js"></script>
+  <script src="services/product.service.js"></script>
+  <script src="services/basket.service.js"></script>
+  <script src="services/exception.service.js"></script>
+  <script src="components/product.controller.js"></script>
+  <script src="components/checkout.controller.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluit">
+      <h2>AngularJS Example</h2>
+    </div>
+  </nav>
+
+
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+</body>
+</html>

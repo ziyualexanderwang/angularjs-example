@@ -1,0 +1,16 @@
+[
+    {
+        "id": "0",
+        "name": "nextday",
+        "description": "Next day delivery",
+        "price": 1.99,
+        "currency": "£"
+    },
+    {
+        "id": "1",
+        "name": "free",
+        "description": "Free delivery: 3 working days",
+        "price": 0,
+        "currency": "£"
+    }
+]

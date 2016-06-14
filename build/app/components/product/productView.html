@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+
+    <h3>Products List</h3>
+
+    <div class="col-md-6" ng-repeat="product in vm.products | filter:vm.isSelected">
+      <div class="products">
+        <div>
+          <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(product)}}</p>
+          <button id="{{product.id}}" class="btn btn-primary" ng-click="vm.addTo(product)">Add To Purchase</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <h3>Purchase List</h3>
+
+    <div class="col-md-6" ng-repeat="purchasedProduct in vm.purchasedProducts">
+      <div class="products">
+        <div>
+          <img ng-src="{{purchasedProduct.imageUrl}}" alt="{{purchasedProduct.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(purchasedProduct)}}</p>
+          <button id="{{purchasedProduct.id}}" class="btn btn-primary" ng-click="vm.removeFrom(purchasedProduct)">Remove From Purchase</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <span class="option">
+      <a ng-disabled="vm.purchasedProducts.length===0" class="btn btn-primary" href="#/checkout">Checkout</a>
+    </span>
+  </div>
+</div>

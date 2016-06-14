@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+
+    <h3>Products List</h3>
+
+    <div class="col-md-6" 
+      ng-repeat="product in vm.products | filter:vm.isSelected">
+
+      <div class="products">
+        <div>
+          <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(product)}}</p>
+          <button id="{{product.id}}" 
+            class="btn btn-primary" 
+            ng-click="vm.addProduct(product)">Add To Basket
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <h3>Basket</h3>
+
+    <div class="col-md-6" 
+      ng-repeat="product in vm.basketProducts">
+
+      <div class="products">
+        <div>
+          <img ng-src="{{product.imageUrl}}" 
+            alt="{{product.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(product)}}</p>
+          <button id="{{product.id}}" 
+            class="btn btn-primary" 
+            ng-click="vm.delProduct(product)">Cancel
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <span class="option">
+      <a ng-disabled="!vm.basketProducts.length" 
+        class="btn btn-primary" href="#/checkout">Checkout</a>
+    </span>
+  </div>
+</div>

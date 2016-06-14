@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+    <h3>Checkout</h3>
+    
+    <label for="singleSelect"> Select currency: </label>
+    <select name="singleSelect" ng-model="vm.currency">
+      <option ng-repeat="(key, value) in vm.currencyRates" value="{{key}}">{{key}}</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6" ng-repeat="purchasedProduct in vm.purchasedProducts">
+      <div class="products">
+        <div>
+          <img ng-src="{{purchasedProduct.imageUrl}}" alt="{{purchasedProduct.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(purchasedProduct)}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 id="totalCosts">{{vm.formatTotalCosts()}}</h4>
+
+  <div class="row">
+    <span class="option"><a class="btn btn-primary" href="#/products">Go back</a></span>
+  </div>
+</div>

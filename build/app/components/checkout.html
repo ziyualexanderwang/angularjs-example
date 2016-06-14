@@ -1,0 +1,51 @@
+<div class="container">
+
+  <div class="row">
+    <h3>Checkout</h3>
+
+    <div class="col-md-6" 
+      ng-repeat="product in vm.products">
+
+      <div class="products">
+        <div>
+          <img ng-src="{{product.imageUrl}}" 
+            alt="{{product.name}}">
+        </div>
+        <div>
+          <p>{{vm.formatProduct(product)}}</p>
+          <button id="{{product.id}}" 
+            class="btn btn-primary" 
+            ng-click="vm.delProduct(product)">Cancel
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <ul>
+      <li ng-repeat="delivery in vm.deliveries">
+        <label>
+          <input type="radio"
+            name="delivery"
+            ng-model="vm.deliveryName"
+            ng-click="vm.setDelivery(delivery)"
+            ng-checked="vm.delivery&&vm.delivery.id===delivery.id" 
+            value="{{delivery.name}}">
+          {{delivery.description}} ({{delivery.currency + delivery.price}})
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <h4 id="totalCosts">{{vm.formatTotalCosts()}}</h4>
+
+  <div class="row">
+    <span class="option">
+      <a class="btn btn-primary" href="#/products">Go back</a>
+      <a ng-disabled="!vm.delivery.id||!vm.products.length"
+        class="btn btn-primary" href="#/finish">Confirm</a>
+    </span>
+  </div>
+</div>

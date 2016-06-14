@@ -1,0 +1,34 @@
+[
+    {
+        "id": "Peas", 
+        "name": "Peas",
+        "imageUrl": "assets/img/products/peas.jpg", 
+        "price": 0.95,
+        "currency": "£",
+       	"units": "per bag"
+    }, 
+    {
+        "id": "Eggs", 
+        "name": "Eggs",
+        "imageUrl": "assets/img/products/eggs.jpg", 
+        "price": 2.10,
+        "currency": "£",
+       	"units": "per dozen"
+    }, 
+    {
+        "id": "Milk", 
+        "name": "Milk",
+        "imageUrl": "assets/img/products/milk.jpg", 
+        "price": 1.30,
+        "currency": "£",
+       	"units": "per bottle"
+    }, 
+    {
+        "id": "Beans", 
+        "name": "Beans",
+        "imageUrl": "assets/img/products/beans.jpg", 
+        "price": 0.73,
+        "currency": "£",
+       	"units": "per can"
+    }
+]
